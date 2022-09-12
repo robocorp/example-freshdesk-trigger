@@ -10,7 +10,7 @@ Create API key
 
 Find the API call details from API helper
 
-![FireShot Capture 179 - Solution Demos (STABLE) · Process - cloud robocorp com](https://user-images.githubusercontent.com/40179958/189671781-10ba27b3-3af0-4033-9ac2-2f943bcb81d7.png)
+![FireShot Capture 181 - Solution Demos (STABLE) · Process - cloud robocorp com](https://user-images.githubusercontent.com/40179958/189673841-dc635abd-e32d-4dc4-8855-4b07a6a1608b.png)
 
 ## Configuring the automation in Freshdesk
 
