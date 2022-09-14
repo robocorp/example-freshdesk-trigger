@@ -19,18 +19,18 @@ Read one Freshdesk payload
     # First update priority to Urgent
     ${ticket}=    FreshdeskLibrary.Update Ticket
     ...    ${payload}[freshdesk_webhook][ticket_id]
-    ...    priority=${4}
+    ...    priority=${4}     # URGENT
 
     # Second, create a private note
-    ${comment}=    Create Note
+    ${comment}=    FreshdeskLibrary.Create Note
     ...    ${payload}[freshdesk_webhook][ticket_id]
     ...    Robocorp process has touched this ticket.
     ...    ${TRUE}
 
     # Third, create a public note that will trigger a reply to submitter
-    ${comment}=    Create Note
+    ${comment}=    FreshdeskLibrary.Create Note
     ...    ${payload}[freshdesk_webhook][ticket_id]
-    ...    Robocorp process has done some create actions to your ticket and now updates you with all the fresh information.
+    ...    Robocorp process has done some great actions to your ticket and now updates you with all the fresh information.
     ...    ${FALSE}
 
 Authorize Freshdesk
