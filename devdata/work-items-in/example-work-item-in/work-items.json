@@ -1,0 +1,9 @@
+[
+  {
+    "freshdesk_webhook": {
+      "ticket_id": 4,
+      "ticket_subject": "adsdas asdasd asd asd",
+      "ticket_contact_email": "some-user@gmail.com"
+    }
+  }
+]
