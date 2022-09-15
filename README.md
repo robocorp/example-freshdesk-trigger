@@ -70,6 +70,8 @@ The robot example included will take the payload sent by Freshdesk automation an
 
 In order to use the robot, you'll need to configure a Vault called `Freshdesk` that contains two items: `apikey` that is found under your Freshdesk profile and `domain` that looks like `yourownsubdomain.freshdesk.com`.
 
-| NOTE! Api key determines in who's name robot is manipulating the tickets. The best practise is to create a separate user for the robot.
+![image](https://user-images.githubusercontent.com/40179958/190337555-599ced77-1b2a-4ac5-b81f-752cfc25f2ca.png)
+
+> NOTE! Api key determines in who's name robot is manipulating the tickets. The best practise is to create a separate user for the robot.
 
 Then add the robot to control room, create a process and use that process in your Freshdesk automation. Voila, Robocorp RPA and Freshdesk now talks two ways!
