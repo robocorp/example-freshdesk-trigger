@@ -19,6 +19,8 @@ After that, the easiest way to find the rest of the details is by navigating to 
 
 ## Configuring the automation in Freshdesk
 
+If you don't have your Freshdesk instance, you can create a free demo [here](https://freshdesk.com/signup) that is valid for 21 days.
+
 To create automation rules, navigate to `Admin` > `Workflows` > `Automations` and hit "Create a rule".
 
 ![image](https://user-images.githubusercontent.com/40179958/189669353-6ab75adc-936e-416a-9b9b-813a53df35cd.png)
