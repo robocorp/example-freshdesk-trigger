@@ -68,7 +68,7 @@ After saving you are all done!
 
 ## Writing data back to Freshdesk
 
-The robot example included will take the payload sent by Freshdesk automation and write data back to the ticket. In real life, you would naturally have additional tasks in the robot code. For example you could perform NLP tasks to the ticket content using [Google API](https://robocorp.com/docs/libraries/rpa-framework/rpa-cloud-google/keywords#analyze-sentiment), or fetch additiona data from legacy systems using [web](https://robocorp.com/docs/development-guide/browser) or [desktop](https://robocorp.com/docs/development-guide/desktop) automation.
+The robot example included will take the payload sent by Freshdesk automation and write data back to the ticket. In real life, you would naturally have more tasks in the robot code. For example you could perform NLP tasks to the ticket content using [Google API](https://robocorp.com/docs/libraries/rpa-framework/rpa-cloud-google/keywords#analyze-sentiment), or fetch additional data from legacy systems using [web](https://robocorp.com/docs/development-guide/browser) or [desktop](https://robocorp.com/docs/development-guide/desktop) automation.
 
 In order to use the robot, you'll need to configure a Vault called `Freshdesk` that contains two items: `apikey` that is found under your Freshdesk profile and `domain` that looks like `yourownsubdomain.freshdesk.com`.
 
