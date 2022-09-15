@@ -1,5 +1,5 @@
 tasks:
-  Run all tasks:
+  Handle Freshdesk payloads:
     shell: python -m robot --report NONE --outputdir output --logtitle "Task log" tasks.robot
 
 condaConfigFile: conda.yaml

@@ -1,10 +1,12 @@
 *** Settings ***
 Documentation       Example that reads a work item payload from Freshdesk and updates the ticket.
 Library       RPA.Robocorp.WorkItems
-Library       FreshdeskLibrary
 Library       RPA.Robocorp.Vault
+Library       FreshdeskLibrary
 Task Setup    Authorize Freshdesk
 
+*** Variables ***
+${PRIORITY_URGENT}     4
 
 *** Tasks ***
 Load and process Freshdesk payloads
@@ -19,7 +21,7 @@ Read one Freshdesk payload
     # First update priority to Urgent
     ${ticket}=    FreshdeskLibrary.Update Ticket
     ...    ${payload}[freshdesk_webhook][ticket_id]
-    ...    priority=${4}     # URGENT
+    ...    priority=${PRIORITY_URGENT}
 
     # Second, create a private note
     ${comment}=    FreshdeskLibrary.Create Note
