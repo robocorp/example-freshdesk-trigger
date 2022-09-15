@@ -6,7 +6,7 @@ Library       FreshdeskLibrary
 Task Setup    Authorize Freshdesk
 
 *** Variables ***
-${PRIORITY_URGENT}     4
+${PRIORITY_URGENT}     ${4}    # Creates variable as integer with value 4
 
 *** Tasks ***
 Load and process Freshdesk payloads
