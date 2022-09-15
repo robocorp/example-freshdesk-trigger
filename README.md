@@ -1,6 +1,11 @@
 # Triggering Robocorp processes from Freshdesk
 
-[Freshdesk's](https://freshdesk.com/) hugely popular customer service platform can be easily extended with the use of RPA robots. Robocorp's [Control Room API](https://robocorp.com/docs/control-room/apis-and-webhooks) allows triggering of the automated processes in various scenarios. This example demonstrates the required configuration in the [Control Room](https://cloud.robocorp.com/) and in Freshdesk to trigger a process based on various Freshdesk ticket actions.
+[Freshdesk's](https://freshdesk.com/) hugely popular customer service platform can be easily extended with the use of RPA robots. Robocorp's [Control Room API](https://robocorp.com/docs/control-room/apis-and-webhooks) allows triggering of the automated processes in various scenarios. This example demonstrates the required configuration in the [Control Room](https://cloud.robocorp.com/) and in Freshdesk to trigger a process based on various Freshdesk ticket actions. Example also includes a small robot that takes in the payload from Freshdesk, and demonstrates how to update priority and add notes to the ticket.
+
+## What you'll learn with this reference architecture
+
+- Configuring Freshdesk automation to trigger a process execution in Robocorp
+- Using [python-freshdesk](https://pypi.org/project/python-freshdesk/) package to manipulate Freshdesk tickets in the robot
 
 ## Set up the API key in Control Room
 
@@ -61,5 +66,10 @@ After saving you are all done!
 
 ## Writing data back to Freshdesk
 
-This part will be added soon!
+The robot example included will take the payload sent by Freshdesk automation and write data back to the ticket. In real life, you would naturally have additional tasks in the robot code. For example you could perform NLP tasks to the ticket content using [Google API](https://robocorp.com/docs/libraries/rpa-framework/rpa-cloud-google/keywords#analyze-sentiment), or fetch additiona data from legacy systems using [web](https://robocorp.com/docs/development-guide/browser) or [desktop](https://robocorp.com/docs/development-guide/desktop) automation.
 
+In order to use the robot, you'll need to configure a Vault called `Freshdesk` that contains two items: `apikey` that is found under your Freshdesk profile and `domain` that looks like `yourownsubdomain.freshdesk.com`.
+
+| NOTE! Api key determines in who's name robot is manipulating the tickets. The best practise is to create a separate user for the robot.
+
+Then add the robot to control room, create a process and use that process in your Freshdesk automation. Voila, Robocorp RPA and Freshdesk now talks two ways!
