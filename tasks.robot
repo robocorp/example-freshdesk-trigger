@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Example that reads a work item payload from Freshdesk and updates the ticket.
+Documentation       Reads a work item payload from Freshdesk and updates the ticket.
 Library       RPA.Robocorp.WorkItems
 Library       RPA.Robocorp.Vault
 Library       FreshdeskLibrary
@@ -27,13 +27,13 @@ Read one Freshdesk payload
     ${comment}=    FreshdeskLibrary.Create Note
     ...    ${payload}[freshdesk_webhook][ticket_id]
     ...    Robocorp process has touched this ticket.
-    ...    ${TRUE}
+    ...    ${TRUE}    # True for private note
 
     # Third, create a public note that will trigger a reply to submitter
     ${comment}=    FreshdeskLibrary.Create Note
     ...    ${payload}[freshdesk_webhook][ticket_id]
     ...    Robocorp process has done some great actions to your ticket and now updates you with all the fresh information.
-    ...    ${FALSE}
+    ...    ${FALSE}    # False for public note
 
 Authorize Freshdesk
     Log To Console    Create Freshdesk Creds
